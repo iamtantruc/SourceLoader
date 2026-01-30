@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: transparent;
+}
+
+.loader {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    transform: rotate(45deg);
+}
+
+.triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    animation: fold 2s ease-in-out infinite;
+}
+
+.triangle-1 {
+    top: 0;
+    left: 0;
+    border-width: 50px 50px 0 0;
+    border-color: #FF3366 transparent transparent transparent;
+    transform-origin: 100% 100%;
+    animation-delay: 0s;
+}
+
+.triangle-2 {
+    top: 0;
+    right: 0;
+    border-width: 0 50px 50px 0;
+    border-color: transparent #00ff88 transparent transparent;
+    transform-origin: 0% 100%;
+    animation-delay: 0.25s;
+}
+
+.triangle-3 {
+    bottom: 0;
+    right: 0;
+    border-width: 0 0 50px 50px;
+    border-color: transparent transparent #00ffff transparent;
+    transform-origin: 0% 0%;
+    animation-delay: 0.5s;
+}
+
+.triangle-4 {
+    bottom: 0;
+    left: 0;
+    border-width: 50px 0 0 50px;
+    border-color: transparent transparent transparent #FFFF00;
+    transform-origin: 100% 0%;
+    animation-delay: 0.75s;
+}
+
+@keyframes fold {
+    0%, 100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+    25% {
+        transform: scale(0.5) rotate(90deg);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1) rotate(180deg);
+        opacity: 1;
+    }
+    75% {
+        transform: scale(0.5) rotate(270deg);
+        opacity: 0.7;
+    }
+}

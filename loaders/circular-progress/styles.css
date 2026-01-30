@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: transparent;
+}
+
+.loader {
+    width: 100px;
+    height: 100px;
+}
+
+.circular {
+    animation: rotate 2s linear infinite;
+    transform-origin: center center;
+    width: 100%;
+    height: 100%;
+}
+
+.path {
+    stroke: url(#gradient);
+    stroke-linecap: round;
+    stroke-dasharray: 150, 200;
+    stroke-dashoffset: 0;
+    animation: dash 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dash {
+    0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -35;
+    }
+    100% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -124;
+    }
+}
+
+/* Gradient definition via inline style in SVG would be ideal, 
+   but we can approximate with filter */
+.path {
+    stroke: #FF3366;
+    filter: drop-shadow(0 0 10px rgba(255, 51, 102, 0.6));
+}

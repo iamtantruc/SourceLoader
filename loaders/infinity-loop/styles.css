@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: transparent;
+}
+
+.loader {
+    width: 120px;
+    height: 60px;
+}
+
+.infinity {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    animation: rotate 2s linear infinite;
+}
+
+.infinity div {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 4px solid #FF3366;
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: move 2s linear infinite;
+}
+
+.infinity div:nth-child(1) {
+    left: 0;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.infinity div:nth-child(2) {
+    right: 0;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    animation-delay: -1s;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes move {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(30px);
+    }
+}
+
+.infinity div:nth-child(2) {
+    animation-name: moveReverse;
+}
+
+@keyframes moveReverse {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-30px);
+    }
+}

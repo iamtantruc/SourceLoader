@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liquid Morph Loader</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="loader">
+        <svg viewBox="0 0 200 200">
+            <defs>
+                <linearGradient id="liquidGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
+                    <stop offset="50%" style="stop-color:#EC4899;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#F59E0B;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+            <path class="blob" d="M100,100 m-75,0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0" fill="url(#liquidGrad)"/>
+        </svg>
+    </div>
+</body>
+</html>
