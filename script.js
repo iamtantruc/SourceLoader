@@ -69,6 +69,16 @@ const loaders = [
         id: 'aurora-wave',
         name: 'Aurora Wave',
         description: 'Sóng cực quang gradient mơ màng'
+    },
+    {
+        id: 'quantum-sphere',
+        name: 'Quantum Sphere',
+        description: 'Quả cầu 3D với hạt quỹ đạo và hiệu ứng ánh sáng'
+    },
+    {
+        id: 'hexagon-matrix',
+        name: 'Hexagon Matrix',
+        description: 'Ma trận lục giác sáng lên theo sóng'
     }
 ];
 
