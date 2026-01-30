@@ -1,0 +1,199 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: transparent;
+}
+
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hexagon-grid {
+    position: relative;
+}
+
+.hexagon-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -8px;
+}
+
+.hexagon-row.offset {
+    margin-left: 26px;
+}
+
+.hexagon {
+    width: 40px;
+    height: 46px;
+    margin: 0 2px;
+    position: relative;
+}
+
+.hexagon-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: rotate(30deg);
+}
+
+.hexagon-inner::before,
+.hexagon-inner::after {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(135deg, #FF6B9D, #C44569);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transform: rotate(-30deg);
+}
+
+.hexagon-inner::before {
+    top: 0;
+    border-radius: 4px;
+    transform: rotate(-30deg) skewX(30deg);
+}
+
+.hexagon-inner::after {
+    bottom: 0;
+    border-radius: 4px;
+    transform: rotate(-30deg) skewX(-30deg);
+}
+
+/* Wave animation for each hexagon */
+.hexagon-row:nth-child(1) .hexagon:nth-child(1) .hexagon-inner::before,
+.hexagon-row:nth-child(1) .hexagon:nth-child(1) .hexagon-inner::after {
+    animation: glow 2s ease-in-out infinite;
+    animation-delay: 0s;
+}
+
+.hexagon-row:nth-child(1) .hexagon:nth-child(2) .hexagon-inner::before,
+.hexagon-row:nth-child(1) .hexagon:nth-child(2) .hexagon-inner::after {
+    animation: glow 2s ease-in-out infinite;
+    animation-delay: 0.1s;
+}
+
+.hexagon-row:nth-child(1) .hexagon:nth-child(3) .hexagon-inner::before,
+.hexagon-row:nth-child(1) .hexagon:nth-child(3) .hexagon-inner::after {
+    animation: glow 2s ease-in-out infinite;
+    animation-delay: 0.2s;
+}
+
+.hexagon-row:nth-child(2) .hexagon:nth-child(1) .hexagon-inner::before,
+.hexagon-row:nth-child(2) .hexagon:nth-child(1) .hexagon-inner::after {
+    animation: glow 2s ease-in-out infinite;
+    animation-delay: 0.15s;
+}
+
+.hexagon-row:nth-child(2) .hexagon:nth-child(2) .hexagon-inner::before,
+.hexagon-row:nth-child(2) .hexagon:nth-child(2) .hexagon-inner::after {
+    animation: glow 2s ease-in-out infinite;
+    animation-delay: 0.25s;
+}
+
+.hexagon-row:nth-child(2) .hexagon:nth-child(3) .hexagon-inner::before,
+.hexagon-row:nth-child(2) .hexagon:nth-child(3) .hexagon-inner::after {
+    animation: glow 2s ease-in-out infinite;
+    animation-delay: 0.35s;
+}
+
+.hexagon-row:nth-child(2) .hexagon:nth-child(4) .hexagon-inner::before,
+.hexagon-row:nth-child(2) .hexagon:nth-child(4) .hexagon-inner::after {
+    animation: glow 2s ease-in-out infinite;
+    animation-delay: 0.45s;
+}
+
+.hexagon-row:nth-child(3) .hexagon:nth-child(1) .hexagon-inner::before,
+.hexagon-row:nth-child(3) .hexagon:nth-child(1) .hexagon-inner::after {
+    animation: glow 2s ease-in-out infinite;
+    animation-delay: 0.3s;
+}
+
+.hexagon-row:nth-child(3) .hexagon:nth-child(2) .hexagon-inner::before,
+.hexagon-row:nth-child(3) .hexagon:nth-child(2) .hexagon-inner::after {
+    animation: glow 2s ease-in-out infinite;
+    animation-delay: 0.4s;
+}
+
+.hexagon-row:nth-child(3) .hexagon:nth-child(3) .hexagon-inner::before,
+.hexagon-row:nth-child(3) .hexagon:nth-child(3) .hexagon-inner::after {
+    animation: glow 2s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+
+.hexagon-row:nth-child(4) .hexagon:nth-child(1) .hexagon-inner::before,
+.hexagon-row:nth-child(4) .hexagon:nth-child(1) .hexagon-inner::after {
+    animation: glow 2s ease-in-out infinite;
+    animation-delay: 0.45s;
+}
+
+.hexagon-row:nth-child(4) .hexagon:nth-child(2) .hexagon-inner::before,
+.hexagon-row:nth-child(4) .hexagon:nth-child(2) .hexagon-inner::after {
+    animation: glow 2s ease-in-out infinite;
+    animation-delay: 0.55s;
+}
+
+.hexagon-row:nth-child(4) .hexagon:nth-child(3) .hexagon-inner::before,
+.hexagon-row:nth-child(4) .hexagon:nth-child(3) .hexagon-inner::after {
+    animation: glow 2s ease-in-out infinite;
+    animation-delay: 0.65s;
+}
+
+.hexagon-row:nth-child(4) .hexagon:nth-child(4) .hexagon-inner::before,
+.hexagon-row:nth-child(4) .hexagon:nth-child(4) .hexagon-inner::after {
+    animation: glow 2s ease-in-out infinite;
+    animation-delay: 0.75s;
+}
+
+.hexagon-row:nth-child(5) .hexagon:nth-child(1) .hexagon-inner::before,
+.hexagon-row:nth-child(5) .hexagon:nth-child(1) .hexagon-inner::after {
+    animation: glow 2s ease-in-out infinite;
+    animation-delay: 0.6s;
+}
+
+.hexagon-row:nth-child(5) .hexagon:nth-child(2) .hexagon-inner::before,
+.hexagon-row:nth-child(5) .hexagon:nth-child(2) .hexagon-inner::after {
+    animation: glow 2s ease-in-out infinite;
+    animation-delay: 0.7s;
+}
+
+.hexagon-row:nth-child(5) .hexagon:nth-child(3) .hexagon-inner::before,
+.hexagon-row:nth-child(5) .hexagon:nth-child(3) .hexagon-inner::after {
+    animation: glow 2s ease-in-out infinite;
+    animation-delay: 0.8s;
+}
+
+@keyframes glow {
+    0%, 100% {
+        background: linear-gradient(135deg, #2d2d2d, #1a1a1a);
+        box-shadow: 0 0 5px rgba(255, 107, 157, 0.2);
+    }
+    50% {
+        background: linear-gradient(135deg, #FF6B9D, #FEA47F);
+        box-shadow: 
+            0 0 20px rgba(255, 107, 157, 0.8),
+            0 0 40px rgba(255, 107, 157, 0.6),
+            inset 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+}
+
+/* Pulse entire grid */
+.hexagon-grid {
+    animation: pulse-grid 4s ease-in-out infinite;
+}
+
+@keyframes pulse-grid {
+    0%, 100% {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+    50% {
+        transform: scale(1.05);
+        filter: brightness(1.2);
+    }
+}
